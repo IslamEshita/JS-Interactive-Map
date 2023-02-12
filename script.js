@@ -16,6 +16,7 @@ async function getCoords() {
         center: coords,
         zoom: 11,
     });
+    console.log(coords);
 
     // Add openstreetmap tiles
     L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -26,8 +27,7 @@ async function getCoords() {
 
     // Create and add a geolocation marker:
     const marker = L.marker(coords)
-    marker.addTo(myMap).bindPopup('<p1><b>You are here</b></p1>').openPopup()
-
+    marker.addTo(myMap).bindPopup('<p1><b>You Are Here</b></p1>').openPopup()
  }
 
  document.body.onload = function() {
